@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Collaborateurs {
@@ -15,8 +16,12 @@ public class Collaborateurs {
 	
 	String matricule;
 	String nom;
-	String prenom; 
+	String prenom;
+	
+	@ManyToOne
 	Banque banque;
+	@ManyToOne
+	Departement departement;
 	
 	public Collaborateurs() {
 		// TODO Auto-generated constructor stub
