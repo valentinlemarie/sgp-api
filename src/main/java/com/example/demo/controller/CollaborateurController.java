@@ -22,15 +22,16 @@ import com.example.demo.repository.DepartementRepository;
 @RequestMapping("/api")
 public class CollaborateurController {
 		@Autowired CollaborateursRepository collaborateursRepository ;
-
+		@Autowired DepartementRepository departements ;
+		
 		@RequestMapping(method = RequestMethod.GET, path = "/collaborateurs")
 		public List<Collaborateurs> listeDesCollaboratueursAuFormatJSON() {
 			return collaborateursRepository.findAll();	 
 		}
 
 		@RequestMapping(method = RequestMethod.GET, path = "/collaborateurs", params="id")
-		public Collaborateurs collaboratueursAuFormatJSON(@RequestParam("id") int id) {
-			return collaborateursRepository.findById(id) ;
+		public List<Collaborateurs> collaboratueursAuFormatJSON(@RequestParam("id") int id) {			
+			return collaborateursRepository.findByDepartementId(id);
 		}
 		
 		@RequestMapping(method = RequestMethod.GET, path = "/collaborateurs/{matricule}")
