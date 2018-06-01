@@ -15,6 +15,16 @@ public class Departement {
 	
 	String nom ;
 
+	
+	public Departement() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Departement(String nom) {
+		super();
+		this.nom = nom;
+	}
+
 	public int getId() {
 		return id;
 	}

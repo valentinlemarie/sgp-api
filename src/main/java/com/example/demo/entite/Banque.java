@@ -1,9 +1,38 @@
 package com.example.demo.entite;
 
+import javax.persistence.Embeddable;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Banque {
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	int id ;
+	
 	String nom;
 	String iban;
 	String ibic;
+	
+	
+	public Banque() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Banque(String nom, String iban, String ibic) {
+		super();
+		this.nom = nom;
+		this.iban = iban;
+		this.ibic = ibic;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	public String getNom() {
 		return nom;
 	}

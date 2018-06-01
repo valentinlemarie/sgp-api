@@ -15,11 +15,20 @@ public class Collaborateurs {
 	
 	String matricule;
 	String nom;
-	String prenom;
-	@Embedded 
+	String prenom; 
 	Banque banque;
 	
+	public Collaborateurs() {
+		// TODO Auto-generated constructor stub
+	}
 	
+	public Collaborateurs(String matricule, String nom, String prenom, Banque banque) {
+		super();
+		this.matricule = matricule;
+		this.nom = nom;
+		this.prenom = prenom;
+		this.banque = banque;
+	}
 	public Banque getBanque() {
 		return banque;
 	}
