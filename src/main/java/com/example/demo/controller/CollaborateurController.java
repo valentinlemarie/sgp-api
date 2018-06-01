@@ -28,8 +28,8 @@ public class CollaborateurController {
 			return collaborateursRepository.findAll();	 
 		}
 
-		@RequestMapping(method = RequestMethod.GET, path = "/collaborateurs")
-		public Collaborateurs collaboratueursAuFormatJSON(@RequestParam int id) {
+		@RequestMapping(method = RequestMethod.GET, path = "/collaborateurs", params="id")
+		public Collaborateurs collaboratueursAuFormatJSON(@RequestParam("id") int id) {
 			return collaborateursRepository.getOne(id) ;
 		}
 		
