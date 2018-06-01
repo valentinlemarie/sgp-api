@@ -27,13 +27,17 @@ public class Collaborateurs {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public Collaborateurs(String matricule, String nom, String prenom, Banque banque) {
+	
+	public Collaborateurs( String matricule, String nom, String prenom, Banque banque, Departement departement) {
 		super();
+
 		this.matricule = matricule;
 		this.nom = nom;
 		this.prenom = prenom;
 		this.banque = banque;
+		this.departement = departement;
 	}
+
 	public Banque getBanque() {
 		return banque;
 	}
