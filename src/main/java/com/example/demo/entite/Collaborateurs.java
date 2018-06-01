@@ -1,5 +1,7 @@
 package com.example.demo.entite;
 
+import javax.persistence.Embeddable;
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,6 +16,7 @@ public class Collaborateurs {
 	String matricule;
 	String nom;
 	String prenom;
+	@Embedded 
 	Banque banque;
 	
 	
