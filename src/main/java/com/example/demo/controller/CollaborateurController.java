@@ -30,7 +30,7 @@ public class CollaborateurController {
 
 		@RequestMapping(method = RequestMethod.GET, path = "/collaborateurs", params="id")
 		public Collaborateurs collaboratueursAuFormatJSON(@RequestParam("id") int id) {
-			return collaborateursRepository.getOne(id) ;
+			return collaborateursRepository.findById(id) ;
 		}
 		
 		@RequestMapping(method = RequestMethod.GET, path = "/collaborateurs/{matricule}")
