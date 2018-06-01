@@ -19,7 +19,7 @@ public class DepartementControler {
 
 	@Autowired DepartementRepository departements ;
 
-	@RequestMapping(method = RequestMethod.GET, path = "/departements ")
+	@RequestMapping(method = RequestMethod.GET, path = "/departements")
 	@ResponseBody
 	public List<Departement> listeDesDepartementsAuFormatJSON() {
 		return departements.findAll();	 
